@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "console-cc": {
+      "hosting": {
+        "console-bc": [
+          "console-cc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "console-cc"
+  }
+}

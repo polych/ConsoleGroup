@@ -1,0 +1,8 @@
+<div class="login">
+  <div class="loginBox">
+    <h1>Login</h1>
+    <input type="text" placeholder="login" #userEmail required autofocus>
+    <input type="password" placeholder="Password" #userPassword required>
+    <button (click)="authService.login(userEmail.value, userPassword.value)">Login</button>
+  </div>
+</div>

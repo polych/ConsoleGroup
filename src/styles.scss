@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/global.scss';
+@import 'assets/fonts.scss';
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Rounded Elegance', sans-serif;
+  font-weight: 400;
+  color: #47505b;
+;
+}
+

@@ -1,0 +1,112 @@
+@import "src/assets/colors";
+
+
+.contacts-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 2% 5%;
+  justify-content: space-between;
+  *{
+    color: $elements-color;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contacts-container {
+    flex-wrap: wrap;
+  }
+}
+
+.contacts-main {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+}
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 36px;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.mail-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  font-size: 36px;
+  p {
+    margin: 2%;
+  }
+  button {
+    align-self: center;
+    background-color: black;
+    height: 50px;
+    width: 200px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 10%;
+  min-width: 200px;
+  a {
+    margin: unset;
+  }
+  i {
+    cursor: pointer;
+    font-size: 38px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  p, a {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contacts-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    div {
+      width: 40%;
+      text-align: center;
+      padding: 5px;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .contacts-container {
+    flex-direction: column;
+    align-items: center;
+    div {
+      width: 90%;
+      }
+  }
+  div.social {
+    width: 90% !important;
+    a {
+      margin: auto;
+      i {
+        margin: unset;
+      }
+    }
+  }
+}
+.design-instagram {
+  color: gray;
+}
+.design-instagram:hover {
+  opacity: 0.7;
+}

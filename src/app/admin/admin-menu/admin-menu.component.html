@@ -1,0 +1,7 @@
+<div class="admin-menu">
+  <a [routerLink]="['']" routerLinkActive="active">Сайт</a>
+  <a [routerLink]="['project-form']" routerLinkActive="active">Портфоліо</a>
+  <a [routerLink]="['example-form']" routerLinkActive="active">Приклади</a>
+  <!-- <a [routerLink]="['other']" routerLinkActive="active">Інше</a> -->
+  <a (click)="authService.logout()">Вийти</a>
+</div>

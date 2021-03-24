@@ -1,0 +1,34 @@
+@import "src/assets/_colors.scss";
+
+
+.main-page-block {
+  width: inherit;
+  display: flex;
+  padding: 5%;
+  >img {
+    width: 50%;
+    max-height: 500px;
+  }
+
+}
+.secondary-page-info {
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  >h1 {
+    padding: 10px 0px;
+  }
+}
+@media screen and (max-width: 800px){
+  .main-page-block {
+    flex-direction: column;
+    justify-content: flex-end;
+    height: unset;
+    >img {
+      margin: auto;
+      width: 90%;
+      height: unset;
+    }
+  }
+}
+

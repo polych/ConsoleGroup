@@ -1,0 +1,94 @@
+@import 'src/assets/colors';
+.body {
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.portfolio {
+  width: 100%;
+  background-color: $background-color;
+}
+
+.why-we,
+.principles {
+  width: 100%;
+  display: flex;
+  padding-top: 2%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.packages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  padding: 3% 0;
+
+}
+
+.contacts-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: $important-color;
+}
+
+// menu
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #a3a3a3ab;
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.open-nav {
+  width: 50vw;
+}
+
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+
+}
+.closebtn{
+  cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  .open-nav {
+    width: 100vw;
+  }
+}

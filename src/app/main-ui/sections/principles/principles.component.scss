@@ -1,0 +1,64 @@
+@import 'src/assets/colors';
+
+
+.principles-container {
+  height: inherit;
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+.reason {
+  width: 30%;
+  padding: 20px;
+  margin: 10px;
+  // background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  -webkit-box-shadow: 0 0px 8px #cccdce;
+  box-shadow: 0 0px 8px #cccdce;
+
+  svg {
+    width: 100px;
+    height: 100px;
+  }
+  path {
+    fill: $elements-color;
+  }
+p {
+  font-size: 20px;
+  color: $elements-color;
+}
+img, h3, p {
+  margin: 10px;
+}
+}
+@media screen and (max-width: 800px) {
+  .reason {
+    width: 44%;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .reason {
+    width: 40%;
+    margin: 5px;
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 18px;
+      padding: 5px 10% 5px 10%;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .reason {
+    width: 72%;
+  }
+}

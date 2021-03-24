@@ -1,0 +1,17 @@
+<div class="portfolio-box">
+  <h2>Портфоліо</h2>
+
+  <div
+    class="single-project"
+    *ngFor="let project of portfolio | async | slice:0:count"
+    routerLink="/project/{{project.id}}"
+  >
+    <img class="slider" src="{{ project.image }}" />
+    <div class="project-disc">
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.adress }}</p>
+    </div>
+  </div>
+
+  <button *ngIf="(portfolio|async).length !== count" (click)="showMore()">Більше</button>
+</div>

@@ -1,0 +1,81 @@
+.change-example{
+  display: flex;
+  flex-direction: row;
+  width: 96%;
+  padding: 2%;
+}
+
+.files-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 62vw;
+  padding: 2vw;
+}
+.files-list {
+  width: 90%;
+  min-height: 120px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+.file {
+  position: relative;
+  padding: 20px;
+  img {
+    height: 150px;
+    width: 150px;
+  }
+  button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+}
+
+.add-files {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  select {
+    border: none;
+    padding: 5px;
+  }
+}
+.dropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 30vw;
+  font-weight: 200;
+  height: 300px;
+  border: 2px dashed #f16624;
+  border-radius: 5px;
+  background: white;
+  margin: 10px 0;
+  margin: 2vw;
+
+  &.hovering {
+      border: 2px solid #f16624;
+      color: #dadada !important;
+  }
+
+  .file-label {
+      font-size: 1.2em;
+  }
+}
+

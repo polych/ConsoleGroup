@@ -1,0 +1,7 @@
+<app-admin-menu *ngIf="authService.isLoggedIn" class="topAdmin"></app-admin-menu>
+<app-header *ngIf="!route()"></app-header>
+<app-header-min *ngIf="route()" ></app-header-min>
+
+<router-outlet></router-outlet>
+
+

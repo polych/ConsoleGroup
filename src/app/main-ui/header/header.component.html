@@ -1,0 +1,42 @@
+<header id="home">
+  <a [routerLink]="['']" class="logo"
+    ><img src="/assets/images/logo.png" alt=""
+  /></a>
+
+  <div class="main-title">
+    <img src="assets/images/logo.png" alt="">
+    <div class="upper-title">
+      <a [routerLink]="['constructing']">БУДІВНИЦТВО</a>
+      <a [routerLink]="['reconstructing']">РЕКОНСТРУКЦІЯ</a>
+      <a [routerLink]="['design']">ДИЗАЙН</a>
+    </div>
+  </div>
+
+  <button (click)="openNav()" class="menu-bar-mobile">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="side-nav">
+    <button (click)="openNav()" class="menu-bar">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="social">
+      <a href="http://"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/consoldes/"><i class="fab fa-instagram design-instagram"></i></a>
+      <a href="http://"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</header>
+
+<div id="mySidenav" class="sidenav">
+  <a class="closebtn" (click)="closeNav()">&times;</a>
+  <a (click)="clickScroll('home')">Головна</a>
+  <a [routerLink]="['sandblasting']">Піскоструменева очистка приміщень</a>
+  <a (click)="clickScroll('whyWe')">Чому ми</a>
+  <!-- <a (click)="clickScroll('portfolioBox')">Портфоліо</a> -->
+  <a (click)="clickScroll('principles')">Принцип роботи</a>
+  <a (click)="clickScroll('projectExamples')">Приклади</a>
+  <a (click)="clickScroll('packages')">Пакети</a>
+  <a (click)="clickScroll('about')">Про нас</a>
+  <a (click)="clickScroll('contacts')">Контакти</a>
+</div>

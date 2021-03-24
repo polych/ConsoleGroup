@@ -1,0 +1,68 @@
+.about {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 10%;
+}
+
+
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  p {
+    margin-top: 10%;
+  }
+  padding: 2%;
+}
+
+.about-image {
+  width: 60%;
+  max-height: 600px;
+  margin: 2%;
+}
+
+.soc {
+  a {
+    margin: 5%;
+    color: black;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .about-image {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/assets/images/about.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: unset;
+  }
+  .about-image {
+    display: none;
+  }
+  .about-text {
+    width: inherit;
+    background-color: rgba(255, 255, 255, 0.6);
+    h2 {
+      text-align: center;
+    }
+  }
+
+}
+.design-instagram {
+  color: gray;
+}
+.design-instagram:hover {
+  opacity: 0.7;
+}

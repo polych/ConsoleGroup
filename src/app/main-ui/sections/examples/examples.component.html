@@ -1,0 +1,53 @@
+<div class="examples">
+
+  <div class="image-slider">
+    <div class="carousel">
+      <ng-container *ngFor="let slide of photos | async; let i = index">
+        <img
+          *ngIf="i === currentPhotoSlide"
+          [src]="slide.path"
+          class="slide"
+          @carouselAnimation
+        />
+      </ng-container>
+      <div class="control-mobile">
+        <div class="left-mobile" (click)="onPreviousClickPhoto()">
+        </div>
+        <div class="right-mobile" (click)="onNextClickPhoto()">
+        </div>
+      </div>
+
+      <!-- controls -->
+      <div class="image-control control">
+        <button class="control-button arrow-left" (click)="onPreviousClickPhoto()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="control-button arrow-right" (click)="onNextClickPhoto()">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="drawning-slider">
+    <h2 class="examples-title">Взірець проєкту</h2>
+    <div class="drawning-carousel">
+      <ng-container *ngFor="let slide of draws | async; let i = index">
+        <img
+          *ngIf="i === currentDrawSlide"
+          [src]="slide.path"
+          class="slide"
+          @carouselAnimation
+        />
+      </ng-container>
+    </div>
+    <div class="drawning-control control">
+      <button class="control-button arrow-right" (click)="onNextClickDraw()">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <button class="control-button arrow-left" (click)="onPreviousClickDraw()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </div>
+  </div>
+</div>

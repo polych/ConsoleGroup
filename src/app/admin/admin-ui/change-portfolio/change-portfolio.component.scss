@@ -1,0 +1,130 @@
+.change-portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.portfolio-examples {
+  width: 56%;
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  min-height: 150px;
+  height: auto;
+  max-height: 30%;
+  margin: 2%;
+  img {
+    width: 100%;
+  }
+  button {
+    background-color: #555;
+  }
+  *{
+    margin: 2%;
+  }
+}
+
+
+
+
+
+
+// form
+.item-field {
+  width: 36%;
+}
+#adress,
+#title,
+#content {
+  width: 96%;
+  padding: 2%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+}
+
+.col-1 {
+  float: left;
+  width: 16vw;
+  margin-top: 6px;
+}
+
+.col-2 {
+  width: 100%;
+  float: left;
+  margin-top: 6px;
+}
+.formImage {
+  max-width: 40%;
+  height: auto;
+}
+div.add-photo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.file {
+  width: 70%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-1,
+  .col-2,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+.formImage {
+  margin-left: 20px;
+  height: 100px;
+  width: 100px;
+  background-color: gray;
+}
+.submit {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  margin: 2%;
+
+  background-color: #555;
+  font-size: 14px;
+
+  padding: 10px 20px;
+
+  cursor: pointer;
+}

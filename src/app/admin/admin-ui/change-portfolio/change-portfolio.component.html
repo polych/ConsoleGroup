@@ -1,0 +1,75 @@
+<div class="change-portfolio">
+  <div class="portfolio-examples">
+    <div *ngFor="let project of portfolio | async" class="project-container">
+      <h3>{{ project.title }}</h3>
+      <img src="{{ project.image }}" alt="{{ project.title }}" />
+      <!-- <button (click)="updateProject(project.id)">Редагувати</button> -->
+      <button (click)="deleteProject(project.id, project.image)">
+        Видалити
+      </button>
+    </div>
+  </div>
+  <div class="item-field">
+    <div class="container">
+      <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-1">
+            <label for="title">Заголовок</label>
+          </div>
+          <div class="col-2">
+            <input
+              type="text"
+              id="title"
+              formControlName="title"
+              placeholder="Назва"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <label for="title">Адреса</label>
+          </div>
+          <div class="col-2">
+            <input
+              type="text"
+              id="adress"
+              formControlName="adress"
+              placeholder="Адреса"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <label for="file">Фото:</label>
+          </div>
+          <div class="col-2 add-photo">
+            <input
+              class="file"
+              type="file"
+              #file
+              id="file"
+              (change)="uploadImage($event, file.files)"
+            />
+            <img class="formImage" [(src)]="imgURL" *ngIf="imgURL" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <label for="content">Опис:</label>
+          </div>
+          <div class="col-2">
+            <textarea
+              id="content"
+              formControlName="content"
+              placeholder="Опис:"
+              rows="6"
+            ></textarea>
+          </div>
+        </div>
+        <div class="row, submit">
+          <button class="button" type="submit">Надіслати</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

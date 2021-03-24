@@ -1,0 +1,11 @@
+<div class="single-project" *ngIf="project">
+  <img src="{{ project.image }}" alt="{{ [project.title] }}" />
+  <div class="project-info" >
+    <h1>{{ project.title }}</h1>
+    <p>{{ project.content }}</p>
+    <p class="adress">{{ project.adress }}</p>
+  </div>
+</div>
+<button class="button-back" routerLink=''>
+  <i class="fas fa-times"></i>
+</button>

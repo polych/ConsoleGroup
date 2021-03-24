@@ -1,0 +1,35 @@
+<div class="change-example">
+  <div class="files-block">
+    <div class="files-list" >
+      <div class="file" *ngFor="let photo of photos | async">
+        <img src="{{ photo.path }}" alt="" />
+        <button (click)="deletePicture(photo, 'photo')">Видалити</button>
+      </div>
+    </div>
+    <div class="files-list">
+      <div class="file" *ngFor="let draw of draws | async">
+        <img src="{{ draw.path }}" alt="" />
+        <button (click)="deletePicture(draw, 'draw')">Видалити</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="add-files">
+    <select #collection>
+      <option value="photo">Фото</option>
+      <option value="draw">Креслення</option>
+    </select>
+    <div
+      class="dropzone"
+      dropzone
+      (hovered)="toggleHover($event)"
+      (dropped)="onDrop($event)"
+      [class.hovering]="isHovering"
+    >
+      <p>Перетягніть сюди файли</p>
+    </div>
+    <div *ngFor="let file of files">
+      <upload-task [file]="file" [collection]="collection.value"></upload-task>
+    </div>
+  </div>
+</div>

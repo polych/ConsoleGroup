@@ -1,0 +1,23 @@
+<div class="header-min" id="home">
+  <a [routerLink]="['']" *ngIf="router.url !== '/design'" class="logo"><img src="/assets/images/logo.png" alt="" /></a>
+  <a *ngIf="router.url == '/design'" [routerLink]="['']" class="logo"><img src="/assets/images/logo-des.png" alt="" /></a>
+
+
+  <div>
+    <button (click)="openNav()" class="menu-bar">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a class="closebtn" (click)="closeNav()">&times;</a>
+  <a (click)="clickScroll('home')">Головна</a>
+  <a [routerLink]="['sandblasting']">Піскоструменева очистка приміщень</a>
+  <a (click)="clickScroll('whyWe')">Чому ми</a>
+  <!-- <a (click)="clickScroll('portfolioBox')">Портфоліо</a> -->
+  <a (click)="clickScroll('principles')">Принцип роботи</a>
+  <a (click)="clickScroll('projectExamples')">Приклади</a>
+  <a (click)="clickScroll('packages')">Пакети</a>
+  <a (click)="clickScroll('about')">Про нас</a>
+  <a (click)="clickScroll('contacts')">Контакти</a>
+</div>
